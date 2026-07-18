@@ -1,0 +1,38 @@
+[
+    {
+        "titre": "Fleurs de saison",
+        "image": "fleurs.jpg",
+        "icone": "fa-solid fa-spa",
+        "description": "Découvrez nos fleurs cultivées avec passion pour embellir vos jardins, balcons et terrasses."
+    },
+    {
+        "titre": "Plantes vertes",
+        "image": "plantes.jpg",
+        "icone": "fa-solid fa-leaf",
+        "description": "Une sélection de plantes pour apporter une touche naturelle à votre intérieur et extérieur."
+    },
+    {
+        "titre": "Plants potagers",
+        "image": "potager.jpg",
+        "icone": "fa-solid fa-carrot",
+        "description": "Tomates, légumes et plants pour créer votre propre potager."
+    },
+    {
+        "titre": "Plantes aromatiques",
+        "image": "aromatiques.jpg",
+        "icone": "fa-solid fa-seedling",
+        "description": "Basilic, menthe, thym et autres aromatiques pour votre cuisine."
+    },
+    {
+        "titre": "Vivaces",
+        "image": "vivaces.jpg",
+        "icone": "fa-solid fa-tree",
+        "description": "Des plantes durables pour fleurir votre jardin année après année."
+    },
+    {
+        "titre": "Compositions florales",
+        "image": "compositions.jpg",
+        "icone": "fa-solid fa-gift",
+        "description": "Des créations fleuries pour offrir ou décorer vos espaces."
+    }
+]

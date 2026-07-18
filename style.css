@@ -1,0 +1,718 @@
+/* ==================================================
+   LES SERRES DE BRUNO
+   Design Artisan Familial
+================================================== */
+
+
+/* ================= VARIABLES ================= */
+
+:root {
+
+    --vert-fonce:#1d3221;
+    --vert-clair:#637b46;
+    --beige:#f5f1e8;
+    --blanc:#ffffff;
+    --texte:#2b2b2b;
+
+    --transition:0.3s ease;
+
+}
+
+
+
+/* ================= GLOBAL ================= */
+
+
+* {
+    box-sizing:border-box;
+}
+
+
+body {
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    color:var(--texte);
+
+    margin:0;
+
+}
+
+
+h1,h2,h3 {
+
+    font-weight:700;
+
+    color:var(--vert-fonce);
+
+}
+
+
+
+.section {
+
+    padding:90px 0;
+
+}
+
+
+
+a {
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+/* ================= NAVBAR ================= */
+
+
+.navbar {
+
+    padding:15px 0;
+
+    transition:var(--transition);
+
+}
+
+
+.navbar.scrolled {
+
+    background:
+    var(--vert-fonce);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+.navbar-brand img {
+
+    width:90px;
+
+}
+
+
+
+.nav-link {
+
+    color:white !important;
+
+    font-weight:500;
+
+    margin-left:20px;
+
+}
+
+
+.nav-link:hover {
+
+    color:#dce8c8 !important;
+
+}
+
+
+
+
+.navbar-toggler {
+
+    border-color:white;
+
+}
+
+
+
+
+/* ================= HERO ================= */
+
+
+.hero {
+
+
+    height:100vh;
+
+    min-height:650px;
+
+    background-image:
+    url("../images/hero.jpg");
+
+    background-size:
+    cover;
+
+    background-position:
+    center;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+
+}
+
+
+
+.hero-overlay {
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    rgba(29,50,33,.55);
+
+}
+
+
+
+.hero-content {
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero-logo {
+
+    width:180px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero h1 {
+
+    color:white;
+
+    font-size:4rem;
+
+}
+
+
+
+.hero h2 {
+
+    color:white;
+
+    font-size:1.8rem;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+
+
+.hero p {
+
+    font-size:1.2rem;
+
+    margin:25px;
+
+}
+
+
+
+
+
+/* ================= BOUTONS ================= */
+
+
+.btn-green {
+
+
+    background:
+    var(--vert-clair);
+
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    border:none;
+
+    margin:5px;
+
+    transition:var(--transition);
+
+}
+
+
+
+.btn-green:hover {
+
+
+    background:
+    var(--vert-fonce);
+
+    color:white;
+
+    transform:
+    translateY(-3px);
+
+}
+
+
+
+
+.btn-outline-light {
+
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    margin:5px;
+
+}
+
+
+
+
+
+/* ================= PRESENTATION ================= */
+
+
+.presentation {
+
+
+    background:
+    var(--beige);
+
+}
+
+
+
+.presentation img {
+
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.15);
+
+}
+
+
+
+
+.presentation h2 {
+
+
+    font-size:2.5rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+/* ================= PRODUITS ================= */
+
+
+
+.card-product {
+
+
+    background:white;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    height:100%;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.08);
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+.card-product:hover {
+
+
+    transform:
+    translateY(-10px);
+
+
+}
+
+
+
+.card-product i {
+
+
+    font-size:45px;
+
+    color:
+    var(--vert-clair);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.card-product h3 {
+
+
+    font-size:1.5rem;
+
+}
+
+
+
+
+
+/* ================= ENGAGEMENT ================= */
+
+
+
+.engagement {
+
+
+    background:
+    var(--vert-fonce);
+
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 0;
+
+
+}
+
+
+
+.engagement h2 {
+
+
+    color:white;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.engagement i {
+
+
+    font-size:40px;
+
+    color:
+    #d7e6bd;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+.engagement p {
+
+
+    color:white;
+
+}
+
+
+
+
+
+/* ================= CONTACT ================= */
+
+
+.contact-preview {
+
+
+    background:
+    var(--beige);
+
+}
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer {
+
+
+    background:
+    var(--vert-fonce);
+
+
+    color:white;
+
+    padding:50px 0;
+
+
+}
+
+
+
+.footer-logo {
+
+
+    width:120px;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+
+@media(max-width:768px){
+
+
+.hero h1 {
+
+    font-size:2.5rem;
+
+}
+
+
+.hero h2 {
+
+    font-size:1.3rem;
+
+}
+
+
+.hero-logo {
+
+    width:130px;
+
+}
+
+
+.section {
+
+    padding:60px 0;
+
+}
+
+
+.navbar {
+
+
+    background:
+    var(--vert-fonce);
+
+}
+
+
+}
+
+/* ================= PAGE INTERNE ================= */
+
+
+.page-header {
+
+    height:350px;
+
+    background:
+    linear-gradient(
+        rgba(29,50,33,.75),
+        rgba(29,50,33,.75)
+    ),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.page-header h1 {
+
+    color:white;
+
+    font-size:3rem;
+
+}
+
+
+
+.page-header p {
+
+    font-size:1.3rem;
+
+}
+
+/* ================= GALERIE ================= */
+
+
+.galerie img {
+
+
+    height:280px;
+
+    width:100%;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+
+}
+
+
+
+.galerie img:hover {
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
+
+.lightbox {
+
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.85);
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:9999;
+
+
+}
+
+
+
+.lightbox img {
+
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:15px;
+
+
+}
+
+
+
+.close-lightbox {
+
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    color:white;
+
+    font-size:50px;
+
+    cursor:pointer;
+
+
+}
+
+/* ================= CONTACT ================= */
+
+
+.contact-box {
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.form-control {
+
+    border-radius:10px;
+
+    padding:12px;
+
+}
+
+
+
+.map iframe {
+
+    display:block;
+
+}

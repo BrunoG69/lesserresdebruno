@@ -6,39 +6,73 @@
 
 /**
  * Gestion de la navbar au scroll
+ *
+ * Index :
+ * - transparente en haut
+ * - verte après scroll
+ *
+ * Pages internes :
+ * - toujours verte
  */
 
 document.addEventListener("DOMContentLoaded", function () {
 
 
     const navbar = document.querySelector(".navbar");
+    console.log(navbar.className);
+
+    if(!navbar) return;
 
 
-    if(navbar){
+
+    // Gestion uniquement de l'accueil
+
+    if(!navbar.classList.contains("navbar-fixed-green")){
 
 
-        window.addEventListener("scroll", function(){
+        function checkNavbar(){
 
 
-            if(window.scrollY > 80){
+            if(window.scrollY > 50){
+
 
                 navbar.classList.add("scrolled");
 
-            } else {
+
+            }
+            else {
+
 
                 navbar.classList.remove("scrolled");
+
 
             }
 
 
-        });
+        }
+
+
+
+        // Vérification au chargement
+
+        checkNavbar();
+
+
+
+        // Vérification au scroll
+
+        window.addEventListener(
+            "scroll",
+            checkNavbar
+        );
 
 
     }
 
 
-
 });
+
+
 
 
 
@@ -85,8 +119,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
+
+
 /**
- * Chargement de la configuration entreprise
+ * Chargement configuration entreprise
  * depuis data/config.json
  */
 
@@ -114,6 +150,7 @@ async function loadConfig(){
             element.dataset.company;
 
 
+
             if(config[key]){
 
 
@@ -125,7 +162,6 @@ async function loadConfig(){
 
 
         });
-
 
 
     }
@@ -141,9 +177,7 @@ async function loadConfig(){
     }
 
 
-
 }
-
 
 
 

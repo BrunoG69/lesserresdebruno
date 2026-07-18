@@ -82,7 +82,8 @@ a {
 }
 
 
-.navbar.scrolled {
+.navbar.scrolled,
+.navbar.navbar-fixed-green {
 
     background:
     var(--vert-fonce);

@@ -84,9 +84,10 @@ a {
 
 /* Accueil : devient verte au scroll */
 
-.navbar.scrolled {
+.navbar.navbar-fixed-green {
 
-    background-color:var(--vert-fonce);
+    background:
+    var(--vert-fonce);
 
     box-shadow:
     0 5px 20px rgba(0,0,0,.15);

@@ -182,3 +182,17 @@ async function loadConfig(){
 
 
 loadConfig();
+
+async function loadFooter() {
+
+    const footer = document.getElementById("footer");
+
+    if (!footer) return;
+
+    const response = await fetch("includes/footer.html");
+
+    footer.innerHTML = await response.text();
+
+}
+
+loadFooter();

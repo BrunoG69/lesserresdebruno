@@ -125,7 +125,7 @@ function initContactForm() {
         submitBtn.disabled = true;
         submitBtn.textContent = "Envoi en cours...";
 
-        emailjs.sendForm("service_cmvwjlr", "0n3jTYOUjm2CCdwqR", form)
+        emailjs.sendForm("service_cmvwjlr", "template_otg8qwc", form)
             .then(() => {
                 status.innerHTML = `<p class="text-success">Message envoyé avec succès !</p>`;
                 form.reset();

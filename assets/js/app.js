@@ -98,11 +98,45 @@ async function loadConfig() {
    Initialisation générale
 ================================================== */
 document.addEventListener("DOMContentLoaded", async () => {
-    // On attend que le header soit injecté avant d'initialiser la navbar
     await loadHeader();
     initNavbarScroll();
 
     loadFooter();
     loadConfig();
     initSmoothScroll();
+    initContactForm();
 });
+
+/* ==================================================
+   Formulaire de contact (EmailJS)
+================================================== */
+function initContactForm() {
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+
+    emailjs.init("0n3jTYOUjm2CCdwqR");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const status = document.getElementById("formStatus");
+        const submitBtn = document.getElementById("submitBtn");
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Envoi en cours...";
+
+        emailjs.sendForm("service_cmvwjlr", "0n3jTYOUjm2CCdwqR", form)
+            .then(() => {
+                status.innerHTML = `<p class="text-success">Message envoyé avec succès !</p>`;
+                form.reset();
+            })
+            .catch((error) => {
+                status.innerHTML = `<p class="text-danger">Une erreur est survenue, réessayez.</p>`;
+                console.error("Erreur EmailJS :", error);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Envoyer";
+            });
+    });
+}

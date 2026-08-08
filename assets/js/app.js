@@ -5,59 +5,6 @@
 
 
 /* ==================================================
-   Chargement du Head
-   ================================================== */
-async function loadHead() {
-    const head = document.getElementById("head-content");
-    if (!head) return;
-
-    try {
-        const response = await fetch("includes/head.html");
-        if (!response.ok) throw new Error(`Erreur ${response.status}`);
-
-        head.innerHTML = await response.text();
-
-    } catch (error) {
-        console.error("Head non chargé :", error);
-    }
-}
-
-
-/* ==================================================
-   Chargement du Header
-   ================================================== */
-async function loadHeader() {
-    const header = document.getElementById("header");
-    if (!header) return;
-
-    try {
-        const response = await fetch("includes/header.html");
-        if (!response.ok) throw new Error(`Erreur ${response.status}`);
-        header.innerHTML = await response.text();
-    } catch (error) {
-        console.error("Header non chargé :", error);
-    }
-}
-
-
-/* ==================================================
-   Chargement du Footer
-   ================================================== */
-async function loadFooter() {
-    const footer = document.getElementById("footer");
-    if (!footer) return;
-
-    try {
-        const response = await fetch("includes/footer.html");
-        if (!response.ok) throw new Error(`Erreur ${response.status}`);
-        footer.innerHTML = await response.text();
-    } catch (error) {
-        console.error("Footer non chargé :", error);
-    }
-}
-
-
-/* ==================================================
    Gestion de la navbar au scroll
 
    - Index : transparente en haut, verte après scroll
@@ -127,19 +74,10 @@ async function loadConfig() {
 /* ==================================================
    Initialisation générale
    ================================================== */
-document.addEventListener("DOMContentLoaded", async () => {
-
-    // Chargement du Head
-    await loadHead();
-
-    // Chargement du Header
-    await loadHeader();
+document.addEventListener("DOMContentLoaded", () => {
 
     // Initialisation de la navbar
     initNavbarScroll();
-
-    // Chargement du Footer
-    loadFooter();
 
     // Configuration entreprise
     loadConfig();

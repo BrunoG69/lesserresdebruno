@@ -1,1 +1,1 @@
-Mise à jour v1.0 20260807
+Mise à jour v1.0 20260808
